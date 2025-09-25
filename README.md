@@ -1,0 +1,1 @@
+Hello ini adalah repository pertama saya
