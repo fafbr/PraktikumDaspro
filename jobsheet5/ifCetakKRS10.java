@@ -16,6 +16,10 @@ public class ifCetakKRS10 {
         } else {
             System.out.println("Registrasi ditolak. Silahkan lunasi UKT terlebih dahulu");
         }
+
+        // Tambahan: Ternary Operator
+        System.out.println(uktLunas ? "UKT Lunas - Silakan cetak KRS" : "UKT Belum Lunas - Registrasi ditolak");
+      
         sc.close();
     }
 }
