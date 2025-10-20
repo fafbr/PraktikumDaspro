@@ -2,8 +2,8 @@ package jobsheet6;
 import java.util.Scanner;
 public class CM1_10 {
 
-        //konversi nilai angka ke huruf
-    public static String konversiNilai(double nilaiAlgo) {
+    //konversi nilai angka ke huruf
+    static String konversiNilai(double nilaiAlgo) {
         if (nilaiAlgo >= 80) return "A";
         else if (nilaiAlgo >= 73) return "B+";
         else if (nilaiAlgo >= 65) return "B";
@@ -31,6 +31,8 @@ public class CM1_10 {
         int uas1 = sc.nextInt();
         System.out.println("Masukkan nilai Tugas Algoritma dan Pemrograman: ");
         int tugas1 = sc.nextInt();
+        System.out.println("Masukkan nilai Quiz Algoritma dan Pemrograman: ");
+        int quiz1 = sc.nextInt();
 
         //input nilai  uts, uas, tugas Struktur Data
         System.out.println("\n=== INPUT NILAI STRUKTUR DATA ===");
@@ -40,13 +42,15 @@ public class CM1_10 {
         int uas2 = sc.nextInt();
         System.out.println("Masukkan nilai Tugas Struktur Data: ");
         int tugas2 = sc.nextInt();
-        
+        System.out.println("Masukkan nilai Quiz Struktur Data: ");
+        int quiz2 = sc.nextInt();
+
         //Mencari nilai akhir matkul Algoritma
-        double nilaiAlgo = (uts1 * 0.3) + (uas1 * 0.4) + (tugas1 * 0.3);
+        double nilaiAlgo = (uts1 * 0.3) + (uas1 * 0.3) + (tugas1 * 0.3) + (quiz1 * 0.1);
                 String huruf1 = konversiNilai(nilaiAlgo);
 
         //Mencari nilai akhir matkul Struktur
-        double nilaiStruktur = (uts2 * 0.3) + (uas2 * 0.4) + (tugas2 * 0.3);
+        double nilaiStruktur = (uts2 * 0.3) + (uas2 * 0.3) + (tugas2 * 0.3) + (quiz2 * 0.1);
                 String huruf2  = konversiNilai(nilaiStruktur);
 
         //Status lulus permatkul
@@ -63,29 +67,29 @@ public class CM1_10 {
             status2 = "Tidak Lulus";
         }
 
-        //Hasil Penilain Akademik
+        //Hasil Penilaian Akademik
         System.out.println("\n\n===== HASIL PENILAIAN AKADEMIK =====");
         System.out.println("Nama: "+nama);
         System.out.println("NIM: "+nim);
         System.out.println("\n--- Mata Kuliah Algoritma ---");
-        System.out.println("Nilai UTS: "+uts1+"|Nilai UAS: " +uas1+"|Nilai Tugas: "+tugas1+"|Nilai Akhir: "+nilaiAlgo+"|Nilai Huruf: "+huruf1+"|Status: "+status1);
+        System.out.println("Nilai UTS: "+uts1+"|Nilai UAS: " +uas1+"|Nilai Tugas: "+tugas1+"|Nilai Quiz: " + quiz1 +"|Nilai Akhir: "+nilaiAlgo+"|Nilai Huruf: "+huruf1+"|Status: "+status1);
         System.out.println("\n--- Mata Kuliah Struktur Data ---");
-        System.out.println("Nilai UTS: "+ uts2+"|Nilai UAS: "+uas2+"|Nilai Tugas: "+tugas2+"|Nilai Akhir: "+nilaiStruktur+"|Nilai Huruf: "+huruf2+"|Status: "+status2);
+        System.out.println("Nilai UTS: "+ uts2+"|Nilai UAS: "+uas2+"|Nilai Tugas: "+tugas2+"|Nilai Quiz: "+ quiz2+"|Nilai Akhir: "+nilaiStruktur+"|Nilai Huruf: "+huruf2+"|Status: "+status2);
 
         //Rata rata semester
          double rataRata = (nilaiAlgo + nilaiStruktur) / 2;
 
-        //Status Kelulusan Semester
+       // Status Kelulusan Semester
         String statusSemester;
-        if (status1.equalsIgnoreCase("Lulus") && status2.equalsIgnoreCase("Lulus")) {
-            if (rataRata >= 70) {
-                statusSemester = "Lulus";
-            } else {
-                statusSemester = "Tidak Lulus (Rata-rata < 70)";
-            }
-        } else { 
-            statusSemester = "Tidak Lulus (Rata-rata < 70)";
+
+        if (status1.equals("Lulus") && status2.equals("Lulus")) {
+            statusSemester = "Lulus";
+        } else if (status1.equals("Lulus") || status2.equals("Lulus")) {
+            statusSemester = "Tidak Lulus (Salah satu matkul tidak lulus)";
+        } else {
+            statusSemester = "Tidak Lulus (Semua matkul tidak lulus)";
         }
+
        System.out.println("\n\n\nRata-rata Nilai Akhir : "+ rataRata);
        System.out.println("\nStatus Semester : "+statusSemester);
     }
