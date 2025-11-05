@@ -88,7 +88,7 @@ public class CM1_10 {
             statusSemester = "Tidak Lulus (Salah satu matkul tidak lulus)";
         } else {
             statusSemester = "Tidak Lulus (Semua matkul tidak lulus)";
-        }
+    }
 
        System.out.println("\n\n\nRata-rata Nilai Akhir : "+ rataRata);
        System.out.println("\nStatus Semester : "+statusSemester);

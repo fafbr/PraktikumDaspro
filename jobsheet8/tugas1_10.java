@@ -4,9 +4,9 @@ public class tugas1_10 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Masukkan nilai n: ");
-        int n = sc.nextInt();
-
+        // System.out.print("Masukkan nilai n: ");
+        // int n = sc.nextInt();
+        int n = 5;
         for(int i=1; i<=n; i++) {
             int jumlah = 0;
             System.out.print("n = " + i + " -> jumlah kuadrat = ");
