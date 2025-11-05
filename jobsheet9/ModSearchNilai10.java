@@ -4,7 +4,7 @@ public class ModSearchNilai10 {
         Scanner sc = new Scanner(System.in);
 
         int key;
-        int hasil = 0;
+        int hasil = -1;
         
         System.out.print("Masukkan banyaknya nilai yang akan diinput: ");
         int n = sc.nextInt();
@@ -26,7 +26,11 @@ public class ModSearchNilai10 {
         }
 
         System.out.println();
-        System.out.printf("Nilai %d ketemu, merupakan nilai Mahasiswa ke-%d",key,hasil);
+        if (hasil!=-1) {
+            System.out.printf("Nilai %d ketemu, merupakan nilai Mahasiswa ke-%d",key,hasil);
+        } else {
+            System.out.println("Nilai yang dicari tidak ditemukan");
+        }
         System.out.println();
     }
 }
