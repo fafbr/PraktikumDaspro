@@ -3,7 +3,12 @@ public class SIAKAD10 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int[][] nilai = new int[4][3];
+        int baris, kolom;
+        System.out.print("Masukkan jumlah Mahasiswa: ");
+        baris = sc.nextInt();
+        System.out.print("Masukkan jumlah matkul: ");
+        kolom = sc.nextInt();
+        int[][] nilai = new int[baris][kolom];
 
         for (int i=0; i<nilai.length;i++) {
             System.out.println("Input nilai mahasiswa ke-"+(i+1)+": ");
@@ -14,18 +19,18 @@ public class SIAKAD10 {
                 nilai[i][j] = sc.nextInt();
                 totalPerSiswa +=nilai[i][j];
             }
-            System.out.println("Nilai rata-rata: "+totalPerSiswa/3);
+            System.out.println("Nilai rata-rata: "+totalPerSiswa/kolom);
         }
 
         System.out.println("\n=======================================");
         System.out.println("Rata-rata Nilai Setiap Mata Kuliah:");
-        for(int j=0; j<3; j++) {
+        for(int j=0; j<kolom; j++) {
             double totalPerMatkul = 0;
 
-            for(int i=0; i<4; i++) {
+            for(int i=0; i<baris; i++) {
                 totalPerMatkul += nilai[i][j];
             }
-            System.out.println("Mata kuliah "+(j+1)+": "+totalPerMatkul/4);
+            System.out.println("Mata kuliah "+(j+1)+": "+totalPerMatkul/baris);
         }
     }
 }
