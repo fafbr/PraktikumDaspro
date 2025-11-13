@@ -16,6 +16,6 @@
                 } else {
                     System.out.println("Mahasiswa ke-"+i+" Tidak Lulus!");
                 }
-            }
+            }   
         }
     }
