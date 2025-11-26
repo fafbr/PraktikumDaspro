@@ -1,6 +1,6 @@
 import java.util.Scanner;
 import java.util.concurrent.Flow.Subscriber;
-public class Kafe {
+public class Kafe10 {
     public static void Menu(String namaPelanggan, Boolean isMember, String kodePromo) {
         System.out.println("Selamat datang, "+namaPelanggan+"!");
 
