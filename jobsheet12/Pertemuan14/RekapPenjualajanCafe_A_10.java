@@ -1,5 +1,4 @@
 package Pertemuan14;
-
 public class RekapPenjualajanCafe_A_10 {
     static int[][] penjualan = {
         {20, 20, 25, 20, 10, 60, 10}, // kopi
