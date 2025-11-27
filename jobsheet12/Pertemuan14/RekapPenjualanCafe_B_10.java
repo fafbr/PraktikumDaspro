@@ -1,5 +1,4 @@
- package Pertemuan14;
-
+package Pertemuan14;
 import java.util.Scanner;
 public class RekapPenjualanCafe_B_10 {
     public static void inputData(int[][] penjualan, String[] menu, Scanner sc) {
