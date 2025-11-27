@@ -1,3 +1,5 @@
+package Pertemuan14;
+
 import java.util.Scanner;
 public class modKafe10 {
     public static void Menu(String namaPelanggan, Boolean isMember, String kodePromo) {

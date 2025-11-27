@@ -1,3 +1,5 @@
+package Pertemuan14;
+
 import java.util.Scanner;
 public class HitungBalok_1_10 {
     public static void main(String[] args) {

@@ -1,3 +1,5 @@
+package Pertemuan14;
+
 import java.util.Scanner;
 import java.util.concurrent.Flow.Subscriber;
 public class Kafe10 {

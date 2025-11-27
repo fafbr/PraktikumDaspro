@@ -1,3 +1,5 @@
+package Pertemuan14;
+
 import java.util.Scanner;
 public class Kubus10 {
     public static int hitungVolume(int sisi) {

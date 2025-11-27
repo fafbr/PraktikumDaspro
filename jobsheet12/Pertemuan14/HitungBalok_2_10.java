@@ -1,3 +1,5 @@
+package Pertemuan14;
+
 import java.util.Scanner;
 public class HitungBalok_2_10 {
     static int hitungLuas(int pjg, int lb) {

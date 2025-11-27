@@ -1,3 +1,5 @@
+package Pertemuan14;
+
 public class PengunjungCafe10 {
     static void daftarPengunjung(String...namaPengunjung) {
         System.out.println("Daftar Nama Pengunjung:");
